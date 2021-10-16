@@ -1,12 +1,15 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import Navbar from '../Navbar/Navbar';
 
 const Header = () => {
     return (
-        <div>
-            <h1>this hader</h1>
-            <Banner></Banner>
-        </div>
+        <header>
+            <div className="container">
+                <Banner></Banner>
+            </div>
+           <Navbar></Navbar>
+        </header>
     );
 };
 

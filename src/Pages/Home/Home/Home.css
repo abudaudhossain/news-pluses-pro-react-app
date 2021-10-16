@@ -1,0 +1,32 @@
+.news {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap      : 30px;
+}
+
+.home-right {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap      : 30px;
+}
+
+@media only screen and (min-width: 468px) and (max-width: 992px) {
+    .news {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 467px) {
+    .news {
+        display: block;
+    }
+
+    .home-right {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+}

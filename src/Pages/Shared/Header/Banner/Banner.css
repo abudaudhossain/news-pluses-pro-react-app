@@ -1,0 +1,37 @@
+.banner {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.paper-titlie {
+    text-align: center;
+}
+
+.s_m_icon a {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    font-size       : 24px;
+    background-color: var(--pramry-color);
+    padding         : 10px;
+    color           : #ddd5e6;
+    border-radius   : 50%;
+    margin          : 5px;
+    float           : left;
+    width           : 40px;
+    height          : 40px;
+    box-sizing      : border-box;
+}
+
+@media only screen and (max-width: 467px) {
+    .banner {
+        display      : block;
+        text-align   : center;
+        margin-bottom: 50px;
+    }
+
+    .s_m_icon {
+        display: inline-block;
+    }
+}

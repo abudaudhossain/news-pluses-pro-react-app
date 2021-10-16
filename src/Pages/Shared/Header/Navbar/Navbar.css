@@ -1,0 +1,21 @@
+nav{
+    border-top: 2px solid var(--pramry-color);
+    border-bottom: 2px solid var(--pramry-color);
+ }
+ nav ul{
+     display:flex;
+     justify-content: center;
+ }
+ nav ul li{
+     padding: 5px;
+     
+ }
+ nav ul li .active{
+     color: var(--active-color);
+ }
+ nav ul li a{
+     color: var(--titile-color);
+     padding: 5px 5px;
+     font-weight: 600;
+     display: inline-block;
+ }

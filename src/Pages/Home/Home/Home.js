@@ -1,13 +1,23 @@
 import React from 'react';
-import Header from '../../Shared/Header/Header/Header';
+import TopNews from '../TopNews/TopNews';
+import TopReports from '../TopReprots/TopReports';
+import TopTopics from '../TopTopics/TopTopics';
 import "./Home.css"
 
 const Home = () => {
     return (
-        <div>
-            <h1>This is home</h1>
-           <Header></Header>
-        </div>
+        <section id="home">
+            <div className="container">
+                <div className="news">
+                    <TopNews></TopNews>
+                    <div className="home-right">
+                        <TopReports></TopReports>
+                        <TopTopics></TopTopics>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     );
 };
 
