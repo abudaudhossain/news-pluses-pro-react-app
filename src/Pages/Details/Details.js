@@ -1,4 +1,4 @@
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import useNews from '../../hooks/useNews';
 import TopReprot from '../Home/TopReprot/TopReprot';
@@ -38,7 +38,7 @@ const Details = () => {
                                 
                             </Row>
                         </Container>
-                    </div> : <h1>Loading....</h1>
+                    </div> : <><Spinner animation="border" variant="primary" /></>
             }
         </div>
     );

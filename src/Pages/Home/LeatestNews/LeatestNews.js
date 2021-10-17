@@ -1,69 +1,39 @@
 import React from 'react';
+import { Spinner } from 'react-bootstrap';
+import useNews from '../../../hooks/useNews';
 import LeftCatgoryNews from '../LeftCatgoryNews/LeftCatgoryNews';
 import RightCotegoryNews from '../RightCotegoryNews/RightCotegoryNews';
+import TopHeadLInesNews from '../TopHeadLinesNews/TopHeadLInesNews';
 import './LeatestNews.css'
 
 const LeatestNews = () => {
+    const { TopHeadlinesNews } = useNews();
+    const { articles } = TopHeadlinesNews();
+
+
+    // business entertainment general health science sports technology
+
     return (
         <section id="latest-news">
             <div className="container">
                 <div className="latest-news">
                     <article className="magazine">
-                        <LeftCatgoryNews></LeftCatgoryNews>
-                        <LeftCatgoryNews></LeftCatgoryNews>                       
+                        <LeftCatgoryNews category = "health"></LeftCatgoryNews>
+                        <LeftCatgoryNews category ="entertainment"></LeftCatgoryNews>
                     </article>
                     <article className="politics">
-                        <h3 className="topic-title">Politics</h3>
-                        <div className="blog">
-                            <div className="blog-img">
-                                <img src="./img/img-4.jpg" alt="" />
-                            </div>
-                            <div className="blog-info">
-                                <h3 className="topic-heading news-heading">Mark Steinberg Reads Donald Trump's Mean Tweets on Kimmel
-                                </h3>
-                                <p className="news-author"><i>Emoli Monis - <time datetime="2021-07-13 13:00">2021-07-13</time> </i></p>
-                                <p>The main thing that you thave to remember on this journey is just be nice to everyone and always what was...</p>
-                            </div>
-                        </div>
-                        <div className="blog">
-                            <div className="blog-img">
-                                <img src="./img/img-4.jpg" alt="" />
-                            </div>
-                            <div className="blog-info">
-                                <h3 className="topic-heading news-heading">Mark Steinberg Reads Donald Trump's Mean Tweets on Kimmel
-                                </h3>
-                                <p className="news-author"><i>Emoli Monis - <time datetime="2021-07-13 13:00">2021-07-13</time> </i></p>
-                                <p>The main thing that you thave to remember on this journey is just be nice to everyone and always what was...</p>
-                            </div>
-                        </div>
-                        <div className="blog">
-                            <div className="blog-img">
-                                <img src="./img/img-4.jpg" alt="" />
-                            </div>
-                            <div className="blog-info">
-                                <h3 className="topic-heading news-heading">Mark Steinberg Reads Donald Trump's Mean Tweets on Kimmel
-                                </h3>
-                                <p className="news-author"><i>Emoli Monis - <time datetime="2021-07-13 13:00">2021-07-13</time> </i></p>
-                                <p>The main thing that you thave to remember on this journey is just be nice to everyone and always what was...</p>
-                            </div>
-                        </div>
-                        <div className="blog">
-                            <div className="blog-img">
-                                <img src="./img/img-4.jpg" alt="" />
-                            </div>
-                            <div className="blog-info">
-                                <h3 className="topic-heading news-heading">Mark Steinberg Reads Donald Trump's Mean Tweets on Kimmel
-                                </h3>
-                                <p className="news-author"><i>Emoli Monis - <time datetime="2021-07-13 13:00">2021-07-13</time> </i></p>
-                                <p>The main thing that you thave to remember on this journey is just be nice to everyone and always what was...</p>
-                            </div>
-                        </div>
+                        <h3 className="topic-title sticky-top bg-white py-3" style={{ top:"-20px"}}>Worl Top Headlines News</h3>
 
+                        {
+                            articles ?
+                            articles.map(article =><TopHeadLInesNews key={article.title} article= {article}></TopHeadLInesNews>) :
+                            <Spinner animation="border" variant="primary" />
+                        }
                     </article>
                     <article className="">
-                       <RightCotegoryNews></RightCotegoryNews>
-                       <RightCotegoryNews></RightCotegoryNews>
-                        
+                        <RightCotegoryNews category="sports"></RightCotegoryNews>
+                        <RightCotegoryNews category ="general"></RightCotegoryNews>
+
 
                     </article>
                 </div>
