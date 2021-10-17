@@ -1,0 +1,10 @@
+.input-area{
+    padding-top: 30px;
+}
+.subscribe input{
+    width: 60%;
+    height: 23px;
+    padding: 5px;
+    border: none;
+    font-size: 1em;
+}

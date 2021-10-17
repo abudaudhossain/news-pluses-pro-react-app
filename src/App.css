@@ -1,5 +1,5 @@
 :root{
-  --pramry-color: #5e6282;
+  --pramry-color: #212541;
   --active-color: #4430f7;
   --headding-color: #14183e;
   --titile-color: #080809;
@@ -56,4 +56,10 @@ figcaption{
   margin-bottom: 30px;
   padding: 10px 20px 20px 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.news-hover{
+  transition: color 0.5s;
+}
+.news-hover:hover .news-title{
+  color: var(--active-color);
 }

@@ -1,0 +1,39 @@
+
+.connects ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-top: 30px;
+}
+.connects ul li{
+    padding: 10px;
+    text-align: center;
+   
+}
+.connects ul li.facebook{
+    background-color: rgb(47, 47, 145);
+    cursor: pointer; 
+}
+
+.connects ul li.twitter{
+    background-color: rgb(26, 134, 235);
+    cursor: pointer; 
+}
+.connects ul li.youtube{
+    background-color: #c41c1c;
+    cursor: pointer; 
+}
+.connects ul li .icon{
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 5px;
+    display: inline-block
+    
+}
+.connects ul li h5,
+p{
+    color: #fff;
+}
+.connects ul li p{
+    font-size: 0.7em;
+}

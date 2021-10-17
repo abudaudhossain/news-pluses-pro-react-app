@@ -1,15 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './topNews.css'
 
-const TopNews = () => {
+const TopNews = (props) => {
+    console.log(props.article)
+
+    const { title, author, description, publishedAt, urlToImage } = props?.topNews;
+
     return (
-        <article className="top-news">
-            <h2 className="news-title">Costomer Enganement Marketing: A New Startegy for the Economy</h2>
-            <p className="news-author"><i>Emoli Monis - <time dateTime="2021-07-13 13:00">2021-07-13</time> </i></p>
-            <figure>
-                <img src="./img/img-1.jpg" alt="" className="top-news-img" />
-                <figcaption>The main thinks that you have to remaber on this journey is just be nice to every you and alwayssnil.</figcaption>
-            </figure>
+        <article className="top-news news-hover">
+            <Link to={`/details/${title}`}>
+                <h2 className="news-title">{title}</h2>
+                <p className="news-author"><i>{author} - <time dateTime={publishedAt}>{publishedAt}</time> </i></p>
+                <figure>
+                    <img src={urlToImage} alt="" className="top-news-img" />
+                    <figcaption>{description?.slice(0, 100)}</figcaption>
+                </figure>
+            </Link>
+
 
         </article>
     );

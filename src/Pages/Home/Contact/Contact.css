@@ -1,0 +1,37 @@
+.contact{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.flex-item{
+    position: relative;
+    background: #f1f3f4;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    top: 0;
+    transition: all 1s;
+}
+.flex-item:hover{
+    
+    background:#a054e7;
+    top: -20px;
+
+}
+.flex-item:hover .topic-title,.flex-item:hover .news-author{
+    color: #fff;
+}
+
+button{
+    height: 34px;
+    padding: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    background: #6b468d;
+    border: none;
+    margin-left: -4px;
+}
+

@@ -1,0 +1,6 @@
+.contact .podcast .topic{
+    align-items: center;
+}
+.contact .podcast .topic .topic-img{
+   flex-basis: 80px;
+}

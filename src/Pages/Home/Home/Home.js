@@ -1,23 +1,16 @@
 import React from 'react';
-import TopNews from '../TopNews/TopNews';
-import TopReports from '../TopReprots/TopReports';
-import TopTopics from '../TopTopics/TopTopics';
+import Banner from '../Banner/Banner';
+import Contact from '../Contact/Contact';
+import LeatestNews from '../LeatestNews/LeatestNews';
 import "./Home.css"
 
 const Home = () => {
     return (
-        <section id="home">
-            <div className="container">
-                <div className="news">
-                    <TopNews></TopNews>
-                    <div className="home-right">
-                        <TopReports></TopReports>
-                        <TopTopics></TopTopics>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+        <div>
+            <Banner></Banner>
+            <Contact></Contact>
+            <LeatestNews></LeatestNews>
+        </div>
     );
 };
 

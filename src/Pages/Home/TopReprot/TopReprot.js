@@ -1,13 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const TopReprot = () => {
+const TopReprot = ({article}) => {
+    console.log(article)
+    const {title,author, publishedAt, urlToImage} =article;
+
     return (
-        <div className="report">
+        <div className="report news-hover">
+            <Link to={`/details/${title}`}>
             <figure>
-                <img src="./img/img-3.jpg" alt="" />
+                <img src={urlToImage} alt="img" />
             </figure>
-            <h3 className="report-heading news-heading">Fake enganement is only half the problem</h3>
-            <p className="news-author"><i>Emoli Monis - <time dateTime="2021-07-13 13:00">2021-07-13</time> </i></p>
+            <h3 className="report-heading news-heading news-title">"{title}"</h3>
+            <p className="news-author"><i>{author} - <time dateTime={publishedAt}>{publishedAt}</time> </i></p>
+            
+            </Link>
         </div>
     );
 };

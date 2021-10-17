@@ -1,12 +1,15 @@
 import React from 'react';
 import TopReprot from '../TopReprot/TopReprot';
 
-const TopReports = () => {
+const TopReports = ({articles}) => {
+    console.log(articles);
+
     return (
         <article className="top-reprots">
-            <TopReprot></TopReprot>
-            <TopReprot></TopReprot>
-            <TopReprot></TopReprot>
+            {
+                articles.slice(3, 5).map(article =><TopReprot key={article.title} article={article}></TopReprot>)
+            }
+          
         </article>
     );
 };
